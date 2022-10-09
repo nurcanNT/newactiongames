@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Page</title>
+    <link rel="icon" href="img/games-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-row-game">
+        <div class="menu-left-game">ACTİONGAMES</div>
+        <div class="menu-mid-game">
+          <input type="text" class="search" placeholder="Search..." />
+        </div>
+        <div class="menu-right-game">
+          <a href="index.html">HOME</a>
+          <a href="game.html">GAMES</a>
+        </div>
+      </div>
+      <div class="mid-row-game">
+        <div class="card-group" id="list-game" >
+          <div class="box-card">
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              </div>
+              <div class="footer">
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+            </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"></small>
+              </div>
+            </div>
+            
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+   var actionGames = ``
+    $.get("https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=Action&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=40&page=1&format=json", function(data){
+      for(var key in data){
+ var value = data[key]
+ actionGames += `<div class="card-group" id="list-game" >
+            <div class="box-card">
+            <div class="card">
+              <img class="card-img-top" style="cursor: pointer;"src="${value.Asset[0]}" width="235px" height="250px"  alt="Card image cap">
+              <div class="card-body">
+                <p class="card-title" style="cursor: pointer;">${value.Title}</p>
+                <h5 class="card-text">${value.Description}</h5>
+              </div>
+              <div class="footer-game">
+              <div class="card-footer">
+                <button style="background-color:tomato;color:white;width:100%;cursor: pointer;" url="${value.Url}"> Hemen Oyna <button>
+                </div>
+              </div>
+                </div>
+            </div>
+ `
+}
+$( "#list-game" ).html(actionGames);
+      });
+  </script>
+</body>
+  </html>
