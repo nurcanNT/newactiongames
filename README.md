@@ -10,7 +10,7 @@
 * İcon
 * Footer | Social media icons
 <hr>
-#### image:
+### image:
 
 ![Screenshot_1](https://user-images.githubusercontent.com/105509750/194781101-632d1720-e045-4085-b181-6bbafdbb92a6.png)
 
