@@ -15,18 +15,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat; /* Resmi tekrarlama */
   background-size: cover; /* resmi ekranı kaplayacak hale getir. */
+  /*margin-top: 13rem;*/
 }
 
 .container {
   width: 100%;
-  height: 650px;
+  height: 60rem;
 }
 .container .menu-row {
-  padding: 60px;
+  padding: 30px;
   margin-block-start: 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
+  font-weight: 600;
+  margin-left: -3rem;
 }
 .container .menu-row .menu-left {
   width: 65%;
@@ -41,6 +44,7 @@ body {
   display: flexbox;
   align-items: center;
   font-size: 20px;
+  margin-left: 11rem;
 }
 .container .menu-row .menu-right a {
   color: #1c1e21;
@@ -53,10 +57,10 @@ body {
 .container .menu-row .menu-mid input {
   width: 150%;
   height: 22px;
-  border-radius: 17px;
+  border-radius: 1rem;
   margin-bottom: 270px;
   font-size: 17px;
-  border: 2px solid #dddfe2;
+  border: 2px solid #e591c5;
   padding: 14px 16px;
   color: #1d2129;
 }
@@ -193,47 +197,157 @@ p {
 h4 {
   text-align: left;
   margin-top: 20px;
-  font-size: medium;
+  font-size: larger;
   font-weight: normal;
 }
-@media screen and (max-width: 1060px) {
-  .container .mid-row-game {
-    margin-left: 90px;
-  }
-  .menu-mid-game {
-    width: 70%;
-    padding: 0 10px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .container .mid-row-game {
-    margin-left: 180px;
-  }
-  .menu-mid-game {
-    width: 70%;
-    padding: 0 10px;
+
+
+
+@media screen and (min-width: 960px) {
+  .container .menu-row-game .menu-mid-game input{
+    width: 120%;
   }
 }
-@media screen and (max-width: 650px) {
-  .container .mid-row-game {
-    margin-left: 180px;
+@media screen and (min-width: 720px) and (max-width: 959px) {
+  .container .menu-row-game .menu-left-game{
+    width: 122%;
   }
-  .menu-mid-game {
-    width: 70%;
-    padding: 0 10px;
+  .container .menu-row-game .menu-mid-game input{
+    width: 95%;
+  }
+  .container .menu-row-game .menu-right-game {
+    width: 95%;
+  }
+  
+}
+@media screen and (min-width: 640px) and (max-width: 719px) {
+  .container .menu-row-game .menu-left-game{
+    width: 122%;
+  }
+  .container .menu-row-game .menu-mid-game input{
+    width: 95%;
+  }
+  .container .menu-row-game .menu-right-game {
+    width: 95%;
+  }
+  .box-card{
+    margin-left: 2%;
   }
 }
-@media screen and (max-width: 500px) {
-  .container .menu-row-game {
-    width: 400px;
-    margin: 40px;
-    clear: both;
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  .container .menu-row-game .menu-left-game{
+    width: 160%;
   }
-  .menu-mid-game {
-    clear: both;
-    width: 100px;
-    float: left;
-    margin-right: 10px;
-    margin-left: 30px;
+  .container .menu-row-game .menu-mid-game input{
+    width: 95%;
+    padding: 13%;
+    margin-left: -2rem;
+  }
+  .container .menu-row-game .menu-right-game {
+    width: 160%;
+  }
+  .container .menu-mid-game{
+    padding-left: -1rem;
+  }
+  .box-card{
+    margin-left: 21%;
+  }
+  .container .menu-row .menu-left{
+    font-size: 17px;
+  }
+  .container .menu-row .menu-right{
+    font-size: 17px;
+    width: 145%;
+  }
+  .container .menu-row .menu-mid input{
+    display: none;
+  }
+  .container .menu-row{
+    padding: 47px;
+  }
+  .container .mid-row .mid-left h2 {
+    font-size: 27px;
+  }
+  .footer .footer-left .icons{
+    width: 90%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container .menu-row-game .menu-left-game{
+    width: 160%;
+    font-size: 16px;
+  }
+  .container .menu-row-game .menu-mid-game input{
+    width: 79%;
+    padding: 13%;
+    margin-left: -1rem;
+    display: none;
+  }
+  .container .menu-row-game .menu-right-game {
+    width: 220%;
+    font-size: 16px;
+  }
+  .container .menu-mid-game{
+    padding-left: -1rem;
+  }
+  .box-card{
+    margin-left: 7%;
+  }
+  .container .menu-row .menu-left{
+    font-size: 16px;
+  }
+  .container .menu-row .menu-right{
+    font-size: 16px;
+    width: 145%;
+  }
+  .container .menu-row .menu-mid input{
+    display: none;
+  }
+  .container .menu-row{
+    padding: 47px;
+  }
+  .container .mid-row .mid-left h2 {
+    font-size: 27px;
+  }
+  .footer .footer-left .icons{
+    width: 90%;
+  }
+}
+@media screen and (min-width: 260px) and (max-width: 319px){
+  .container .menu-row-game .menu-left-game{
+    width: 197%;
+    font-size: 13px;
+  }
+  .container .menu-row-game .menu-mid-game input{
+    width: 79%;
+    padding: 13%;
+    margin-left: -1rem;
+    display: none;
+  }
+  .container .menu-row-game .menu-right-game {
+    width: 220%;
+    font-size: 13px;
+  }
+  .container .menu-mid-game{
+    padding-left: -1rem;
+  }
+  .box-card{
+    margin-left: 1%;
+  }
+  .container .menu-row .menu-left{
+    font-size: 13px;
+  }
+  .container .menu-row .menu-right{
+    font-size: 13px;
+    width: 145%;
+  }
+  .container .menu-row .menu-mid input{
+    display: none;
+  }
+  .container .menu-row{
+    padding: 47px;
+  }
+  .container .mid-row .mid-left h2 {
+    font-size: 27px;
   }
 }
