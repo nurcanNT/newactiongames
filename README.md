@@ -1,6 +1,7 @@
 # NewActionGames
 
 ## What was done in the project?
+* Datas get with Axios (but the first datas was pulled with jQuery)
 * Background design
 * Search
 *  <a href="https://hype4.academy/tools/glassmorphism-generator">Glassmorphism Tools</a>
