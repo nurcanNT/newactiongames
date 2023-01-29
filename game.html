@@ -7,6 +7,10 @@
     <title>Game Page</title>
     <link rel="icon" href="img/games-icon.png" />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+
   </head>
   <body>
     <div class="container">
@@ -73,9 +77,12 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script>
    var actionGames = ``
-    $.get("https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=Action&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=40&page=1&format=json", function(data){
-      for(var key in data){
- var value = data[key]
+   var games = {}
+   axios.get('https://catalog.api.gamedistribution.com/api/v2.0/rss/All/?collection=all&categories=Action&tags=All&subType=all&type=all&mobile=all&rewarded=all&amount=40&page=1&format=json')
+  .then(function (response) {
+    console.log(response.data);
+    for(var key in response.data){
+ var value = response.data[key]
  actionGames += `<div class="card-group" id="list-game" >
             <div class="box-card">
             <div class="card">
@@ -94,7 +101,19 @@
  `
 }
 $( "#list-game" ).html(actionGames);
-      });
+
+    games = response;
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log("Bu bir hata mesajıdır!!!",error);
+  })
+  .then(function () {
+    // always executed
+  });
+
   </script>
 </body>
   </html>
