@@ -1,15 +1,14 @@
 # NewActionGames
 
 ## What was done in the project?
-* Datas get with Axios (but the first datas was pulled with jQuery)
+* Data was pulled from API with Axios (but the first datas was pulled with jQuery)
 * Background design
-* Search
-*  <a href="https://hype4.academy/tools/glassmorphism-generator">Glassmorphism Tools</a>
+* Responsive structure created
+* Search, button, icons
 * Game data pulled into boxes
 * Box alignment
-* Button
-* İcon
 * Footer | Social media icons
+* You can experience the games on the "Play Now" button.
 <hr>
 
 #### Image:
