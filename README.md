@@ -1,6 +1,6 @@
 # NewActionGames
 
-## What was done in the project?
+## What was done in this study:
 * Data was pulled from API with Axios (but the first datas was pulled with jQuery)
 * Background design
 * Responsive structure created
